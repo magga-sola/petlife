@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨petlife✨</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="title">
+            <h1>✨PETLIFE✨</h1>
+        </div>
+        <div class="main_menu">
+            <div class="left_side">
+                <div class="example">
+                    <div>
+                        <p>Name your new pet!</p>
+                    </div>
+                    <div>
+                        <form name="getPetName" target="#here" method="post" id="pet_name_form">
+                            <input name="pet_name" type="text" id="petname"/><br />
+                            <input type="submit" hidden />
+                        </form>
+                    </div>
+                    <div>
+                        <p>What are their pronouns?</p>
+                    </div>
+                    <div>
+                        <select name="pronouns" id="pronouns" form="pet_pronoun_form" onchange="proSubmit(this);">
+                            <option>They're figuring it out</option>
+                            <option>She/Her/Hers</option>
+                            <option>They/Them/Theirs</option>
+                            <option>He/Him/His</option>
+                            <option>Ze/Hir/Hirs</option>
+                        </select>
+                        <input type="submit" hidden />
+                    </div>
+                    
+                </div>
+                <div class="example">
+                    <p>Want some new clothes?</p>
+                </div>
+                <div class="example">
+                    <p>Want some new accessories?</p>
+                </div>
+            </div>
+            <div class="pet_area">
+                <div class="pet_image_container">
+                    <div class="arrow_left">
+                        <button id="left" class="btn invisable_button" onclick="switchPet(this)">
+                            <img class="arrow rotate180" src="images\arrow.gif" alt="arrow to the left">
+                        </button>
+                    </div>
+                    <img id="pet_image" src="images\labrador.jpeg" alt="labrador Retriever">
+                    <div class="arrow_right">
+                        <button id="right" class="btn invisable_button" onclick="switchPet(this)">
+                            <img class="arrow" src="images\arrow.gif" alt="arrow to the right" >
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="right_side">
+                <div class="example"><p>Is your pet ready for the job search?</p></div>
+                <div class="example"><p>Is your pet ready to go into debt?</p></div>
+                <div class="example"><p>Is your pet ready for the next phase?</p></div>
+            </div>
+        </div>
+        <div class="paper_container">
+            <img src="images/paper.png" alt="piece of paper" width="500px" height="300px">
+
+            <div class="pet_info_container">
+                <div class="pet_info">
+                    <p class="info_title">Name</p>
+                    <p class="info_text" id="_petName">They don't know yet</p>
+                </div>
+                <div class="pet_info">
+                    <p class="info_title">Pronouns</p>
+                    <p class="info_text" id="_petPronoun">They're figuring it out</p>
+                </div>
+                <div class="pet_info">
+                    <p class="info_title">Job Title</p>
+                    <p class="info_text">In between jobs at the moment</p>
+                </div>
+                <div class="pet_info">
+                    <p class="info_title">Address</p>
+                    <p class="info_text">Looking for a permentant home</p>
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

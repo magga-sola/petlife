@@ -1,0 +1,155 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+    /* Using a system monospace font */
+
+    /* Typewriting font */
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+}
+
+.container {
+    /*background-color: #ff0000;*/
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    padding: 100px;
+    align-self: center;
+}
+
+.title {
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.main_menu {
+    display: flex;
+    justify-content: center;
+    display: flex;
+}
+
+.left_side {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-right: 20px;
+    justify-content: space-evenly;
+
+}
+
+.right_side {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 20px;
+    justify-content: space-evenly;
+}
+
+
+
+.pet_image_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-grow: 4;
+}
+#pet_image {
+  width: 400px;       
+  height: 605px;      
+  object-fit: contain;  
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+
+
+img {
+    border-radius: 8px;
+}
+
+.arrow {
+    width: 100px;
+    height: 100px;
+}
+.arrow_right {
+    align-self: stretch;
+}
+.arrow_left {
+    align-self: stretch;
+}
+
+.invisable_button {
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.pet_info_container {
+    padding-top: 28px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items:center;
+    justify-content: flex-start;
+    padding-left: 200px;
+
+}
+.pet_info {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 10%;
+    justify-content:flex-start;
+    padding-bottom:15px;
+
+}
+.paper_container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.info_title {
+    font-family: 'Source Code Pro', monospace;
+    color: black;
+    font-weight:bold;
+    padding-right:5%;
+}
+.info_text {
+    color:black;
+    font-family: "Reenie Beanie", cursive;
+    font-style: oblique;
+    text-align: center;
+    align-self:center;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.example {
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 150px;
+
+}
