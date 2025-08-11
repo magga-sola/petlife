@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: center;
     display: flex;
+    width: 100%;
 }
 
 .left_side {
@@ -57,13 +58,9 @@ body {
 
 
 
-.pet_image_container {
+.pet_choice_container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-grow: 4;
+    flex-flow: row nowrap;
 }
 #pet_image {
   width: 400px;       
@@ -71,14 +68,45 @@ body {
   object-fit: contain;  
 }
 
+.hidden_img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    object-fit: contain;  
+}
 .rotate180 {
     transform: rotate(180deg);
 }
 
+.hidden_container {
+    position: relative;
+    object-fit: contain;
+}
+
+#floor_accessory {
+    border: 3px solid black;
+    top:400px;
+    right:0;
+    object-fit: fill;
+    display: none;
+}
 
 
-img {
-    border-radius: 8px;
+
+#head_accessory {
+    width: 100px;
+    height: 80px;
+    top: 0;
+    right: 200px;
+    transform: rotate(-10deg);
+    display: none;
+}
+
+#body_accessory {
+    border: 3px solid black;
+    top:200px;
+    right: 130px;
+    display: none;
 }
 
 .arrow {
@@ -91,6 +119,10 @@ img {
 .arrow_left {
     align-self: stretch;
 }
+.pet_image_container {
+    position: relative;
+}
+
 
 .invisable_button {
     background-color: transparent; 
@@ -151,5 +183,17 @@ img {
     background-color: blanchedalmond;
     width: 300px;
     height: 150px;
+}
 
+.closet {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+}
+
+.closet img {
+    width: 25%;
+    height: 25%;
 }

@@ -29,7 +29,7 @@
                         <p>What are their pronouns?</p>
                     </div>
                     <div>
-                        <select name="pronouns" id="pronouns" form="pet_pronoun_form" onchange="proSubmit(this);">
+                        <select name="pronouns" id="pronouns" form="pet_pronoun_form" onchange="proSubmit(this)">
                             <option>They're figuring it out</option>
                             <option>She/Her/Hers</option>
                             <option>They/Them/Theirs</option>
@@ -42,22 +42,34 @@
                 </div>
                 <div class="example">
                     <p>Want some new clothes?</p>
+                    <div class="closet">
+                        <img src="images/head/head_hat.png" onclick="setHatVis(this)">
+                        <img src="images/head/head_crown.png" onclick="setHatVis(this)">
+                        <img src="images/head/head_bow_yellow.png" onclick="setHatVis(this)">
+                    </div>
                 </div>
                 <div class="example">
                     <p>Want some new accessories?</p>
                 </div>
             </div>
             <div class="pet_area">
-                <div class="pet_image_container">
+                <div class="pet_choice_container">
                     <div class="arrow_left">
                         <button id="left" class="btn invisable_button" onclick="switchPet(this)">
-                            <img class="arrow rotate180" src="images\arrow.gif" alt="arrow to the left">
+                            <img class="arrow rotate180" src="images\arrow_still.png" alt="arrow to the left" onmouseover="enableGif(this)" onmouseout="setNormal(this)">
                         </button>
                     </div>
-                    <img id="pet_image" src="images\labrador.jpeg" alt="labrador Retriever">
+                    <div class="pet_image_container">
+                        <img id="pet_image" src="images/labrador.png" alt="labrador Retriever">
+                        <div hidden_container>
+                            <img id="floor_accessory" class="accessory hidden_img" src="images/floor/money.png">
+                            <img id="head_accessory" class="acessory hidden_img" src="">
+                            <img id="body_accessory" class="acessory hidden_img" src="">
+                        </div>
+                    </div>
                     <div class="arrow_right">
                         <button id="right" class="btn invisable_button" onclick="switchPet(this)">
-                            <img class="arrow" src="images\arrow.gif" alt="arrow to the right" >
+                            <img class="arrow" src="images\arrow_still.png" alt="arrow to the right" onmouseover="enableGif(this)" onmouseout="setNormal(this)">
                         </button>
                     </div>
                 </div>
@@ -88,13 +100,8 @@
                     <p class="info_title">Address</p>
                     <p class="info_text">Looking for a permentant home</p>
                 </div>
-
             </div>
-
-        </div>
-        
-        
-
+        </div> 
     </div>
     <script src="script.js"></script>
   </body>
