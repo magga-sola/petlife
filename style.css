@@ -11,20 +11,26 @@ body {
   background-color: white;
   color: black;
   font-family: Verdana;
-}
-
-.container {
-    /*background-color: #ff0000;*/
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .header {
-    width: 100%;
     padding: 100px;
-    align-self: center;
+    display: flex;
+}
+
+.game_container {
+    /*background-color: #ff0000;*/
+    display:flex;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
 }
 
 .title {
@@ -130,6 +136,10 @@ body {
     outline: none;
     width: 100%;
     height: 100%;
+}
+
+#job-search:hover {
+    background-color: yellow;
 }
 
 .pet_info_container {

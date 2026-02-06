@@ -8,7 +8,8 @@ bodyAccEl = document.getElementById('body_accessory');
 headAccEl = document.getElementById('head_accessory');
 rightArrowEl = document.getElementById('right');
 leftArrowEl = document.getElementById('left');
-
+wheelEl = document.getElementById('wheel');
+spinBtnEl = document.getElementById('spinBtn');
 const petImages = [
     'images/labrador.png',
     'images/cat3.png',
