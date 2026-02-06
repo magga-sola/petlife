@@ -19,6 +19,15 @@ const petImages = [
     'images/frog.png'
 ];
 
+const petBox = [
+    'images/property/labrador_box.png',
+    'images/property/cat3_box.png',
+    'images/property/doberman_box.png',
+    'images/property/bunny_box.png',
+    'images/property/goat_box.png',
+    'images/property/frog_box.png'
+];
+
 // transform into Image Elements with appropriate paths
 petImages.forEach(src => {
 
@@ -131,6 +140,47 @@ function setHatVis(imgEl) {
         headAccEl.src = imgEl.src;
         reveal(headAccEl);
     }
+}
+
+function setItemVis(imgEl) {
+    if (imgEl.src == floorAccEl.src) {
+        if (floorAccEl.style.display == "block") {
+            hide(floorAccEl);
+        } else {
+            reveal(floorAccEl);
+        }
+    } else if (floorAccEl.src == ""){
+        floorAccEl.src = imgEl.src;
+        reveal(floorAccEl);
+    } else {
+        floorAccEl.src = imgEl.src;
+        reveal(floorAccEl);
+    }
+}
+
+function getProperty() {
+    let currentSrc = imgEl.src.replace(/(.+\w\/)(.+)/,"/$2");
+    let boxSrc = petBox[idx].replace(/(.+\w\/)(.+)/,"/$2");
+    let petSrc = petImages[idx].replace(/(.+\w\/)(.+)/,"/$2");
+
+    if (currentSrc == petSrc){
+        //Put pet in box
+        petInBox();
+    } else if (currentSrc == boxSrc) {
+        //Remove box
+        resetProperty();
+    }else {
+        return;
+    }
+}
+
+function resetProperty() {
+    imgEl.src = petImages[idx];
+    //imgEl.src = newSrc;
+}
+
+function petInBox() {
+    imgEl.src = petBox[idx];
 }
 
 function reveal(el) {
