@@ -16,6 +16,8 @@ body {
   align-content: center;
   justify-content: flex-start;
   flex-direction: column;
+  align-items: center;
+  background-image: url("images/website/pink-background.gif");
 }
 
 .header {
@@ -26,12 +28,25 @@ body {
 .game_container {
     /*background-color: #ff0000;*/
     display:flex;
-    width: 80%;
+    width: min(1200px, 95vw);    
     height: 80%;
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: white;
 }
+
+.game_stage {
+    display: flex;
+    justify-content: center;
+    transform: scale(0.85);   /* 🔽 hér stjórnarðu stærð */
+    transform-origin: top center;
+  }
+
+.pet_area {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
 
 .title {
     border-radius: 12px;
@@ -45,33 +60,39 @@ body {
     justify-content: center;
     display: flex;
     width: 100%;
+
 }
 
 .left_side {
     display: flex;
     flex-flow: column nowrap;
-    padding-right: 20px;
+    /*padding-right: 20px;*/
     justify-content: space-evenly;
-
+    flex: 1;
+    max-width: 25%;
 }
 
 .right_side {
     display: flex;
     flex-flow: column nowrap;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     justify-content: space-evenly;
+    flex: 1;
+    max-width: 25%;
+    min-width: 220px;
 }
-
-
 
 .pet_choice_container {
     display: flex;
     flex-flow: row nowrap;
 }
-#pet_image {
-  width: 400px;       
-  height: 605px;      
+
+#pet_image {  
   object-fit: contain;  
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 2 / 3;
+  height: auto;
 }
 
 .hidden_img {
