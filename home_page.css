@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Mobile First */
+.board {
+    display: grid;
+    grid-template-areas: 
+      "welcome"
+      "quote"
+      "journal"
+      "stickers"
+      "poloroid";
+  }
+
+.welcome-banner {
+    grid-area: welcome;
+    display: grid;
+    grid-template-areas:
+    "w e l c o m e2";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+}
+.welcome-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.quote {
+    background-color: orange;
+    grid-area: quote;
+}
+.book-journal {
+    background-color: pink;
+    grid-area: journal;
+}
+.stickers {
+    background-color: purple;
+    grid-area: stickers;
+}
+.poloroid {
+    background-color: aquamarine;
+    grid-area: poloroid;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .board {
+      grid-template-areas: 
+        "welcome welcome"
+        "quote journal"
+        "stickers journal"
+        "poloroid poloroid";
+      grid-template-columns: 200px 1fr;
+    }
+  }
+  
+/* Desktop */
+@media (min-width: 1024px) {
+    .board {
+        background-color: beige;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+        "welcome welcome welcome quote"
+        "journal stickers . quote"
+        "journal stickers . poloroid";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
